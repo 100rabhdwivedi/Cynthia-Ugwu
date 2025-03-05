@@ -19,22 +19,38 @@
         .elem img {
         pointer-events: none; /* Allow interactions with the text and other elements */
         }
+        html {
+    scroll-behavior: smooth;
+}
+
 
     </style>
     
 </head>
 
 <body>
-    <div class="minicursor fixed h-3 w-3 rounded-full mix-blend-difference bg-white z-999 -translate-x-1/2 -translate-y-1/2"></div>
-    <main  id="main" class="h-full  w-full bg-black text-white font-['GeneralMedium'] overflow-hidden">
+    <div class="minicursor fixed h-3 w-3 flex items-center justify-center text-[0.2rem] rounded-full mix-blend-diff elem bg-white z-[99] pointer-events-none -translate-x-1/2 -translate-y-1/2"></div>
+    <div class="h-[100vh] loadingpage z-[9999] fixed top-0 w-screen bg-[#a3a3a3] flex items-center justify-center">
+        <div class="text-xl sm:text-[1.2rem] text-white font-['GeneralMedium']"><span> Made by saurabh 100%</span>  </div>
+    </div>
+    <main  id="main" class="h-full  z-50  w-full bg-black text-white font-['GeneralMedium'] overflow-hidden">
+        
         <!-- hero section -->
-        <section>
-            <div class="hero relative w-full h-screen bg-black text-white   px-4 md:px-13">
+        <section >
+            <div id="home" class="hero  w-full h-screen bg-black text-white relative   px-4 md:px-13">
                 <!-- navbar -->
-               <nav class="flex justify-between py-8 text-[4.2vw] sm:text-[1.05rem] ">
+               <nav class="flex  justify-between py-8 text-[4.2vw] sm:text-[1.05rem] ">
                 <h2>Cynthia Ugwu</h2>
-                <h2>MENU<span class="font-50">+</span></h2>
+                <h2 class="menu bord cursor-pointer none">MENU<span class="font-50">+</span></h2>
+
+
                </nav> 
+               <div class="h-[8rem] opacity-0 smallnav w-[5rem] sm:h-[10rem] sm:w-[6rem] px-2 py-2 bg-[#dadada] absolute text-black rounded-md  top-10 right-5">
+                <div class="w-full cursor-pointer text-right "><i class="ri-add-line "></i></div>
+                <a href="#home" class="capitalize translate-y-[100%] overflow-hidden opacity-0 text-[0.8rem] sm:text-[1rem]">home</a>
+                <a href="#work" class="capitalize translate-y-[100%] overflow-hidden opacity-0 text-[0.8rem] sm:text-[1rem]">work</a>
+                <a href="#contact" class="capitalize translate-y-[100%] overflow-hidden opacity-0 text-[0.8rem] sm:text-[1rem]">playground</a>
+               </div>
                 <!-- hero content -->
                  <div class="  leading-none mt-6 w-fit" >
                     <div class="w-fit overflow-hidden bounding" >
@@ -68,7 +84,7 @@
         </section>  
         <!-- second section -->    
         <section>
-            <div class="second w-full bg-black text-white  pl-4 md:pl-12 p-1">
+            <div id="work" class="second w-full bg-black text-white  pl-4 md:pl-12 p-1">
                   <!-- elems   -->
                  <div class="my-[4rem] sm:my-[8rem] pr-4 md:pr-42 ">
                     <div class="elem  uppercase border-t-1 border-[#888] relative   py-6 sm:py-12 flex justify-between items-center">
@@ -96,7 +112,7 @@
                         <h1 class="text-[7vw] text-white/60">somos</h1>
                         <h3 class="text-[3vw] sm:text-[1rem]">2023</h3>
                     </div>
-                    <button class="px-4  sm:px-8 py-1 hover:bg-white hover:text-black transition-all ease-in duration-500  my-6 sm:my-12 rounded-full border-1 border-white text-[0.5rem] sm:text-[1rem]">View all work <sup class="text-white/70">8</sup></button>    
+                    <a target="_blank" href="https://github.com/100rabhdwivedi/"><button class="px-4  sm:px-8 py-1 hover:bg-white hover:text-black transition-all ease-in duration-500  my-6 sm:my-12 rounded-full border-1 border-white text-[0.5rem] sm:text-[1rem]">View all work <sup class="text-white/70">8</sup></button></a>    
                 </div>  
             </div>
           
@@ -105,7 +121,21 @@
         <section>
            
             <div class="border-y-1 bg-black text-white border-white/60 py-6 md:py-12 w-fit flex  ">
-                <div class="flex items-center gap-24 sm:gap-[15rem] items-center  ">
+                <div class="flex marquee items-center gap-24 sm:gap-[15rem] items-center  ">
+                    <img class="h-[2rem] sm:h-[6vw] md:h-[4vw] " src="./public/images/AVIS.svg" alt="">
+                    <img class="h-[2rem] sm:h-[6vw] md:h-[4vw] " src="./public/images/Clover.svg" alt="">
+                    <img class="h-[2rem] sm:h-[6vw] md:h-[4vw] " src="./public/images/Expedia.svg" alt="">
+                    <img class="h-[2rem] sm:h-[6vw] md:h-[4vw] " src="./public/images/Baron.svg" alt="">
+                    <img class="h-[2rem] sm:h-[6vw] md:h-[4vw] " src="./public/images/ETS.svg" alt="">
+                    <img class="h-[2rem] sm:h-[6vw] md:h-[4vw] " src="./public/images/Lucid.svg" alt="">
+                    <img class="h-[2rem] sm:h-[6vw] md:h-[4vw] " src="./public/images/Identity.svg" alt="">
+                    <img class="h-[2rem] sm:h-[6vw] md:h-[4vw] " src="./public/images/Microsoft.svg" alt="">
+                    <img class="h-[2rem] sm:h-[6vw] md:h-[4vw] " src="./public/images/Under_armour.svg" alt="">
+                    <img class="h-[2rem] sm:h-[6vw] md:h-[4vw] " src="./public/images/NFL.svg" alt="">
+                    <img class="h-[2rem] sm:h-[6vw] md:h-[4vw] " src="./public/images/NEOM.svg" alt="">
+                    <img class="h-[2rem] sm:h-[6vw] md:h-[4vw] " src="./public/images/Comcast.svg" alt="">
+                    <img class="h-[2rem] sm:h-[6vw] md:h-[4vw] " src="./public/images/Zappos.svg" alt="">
+                    <img class="h-[2rem] sm:h-[6vw] md:h-[4vw] " src="./public/images/Toefl.svg" alt="">
                     <img class="h-[2rem] sm:h-[6vw] md:h-[4vw] " src="./public/images/AVIS.svg" alt="">
                     <img class="h-[2rem] sm:h-[6vw] md:h-[4vw] " src="./public/images/Clover.svg" alt="">
                     <img class="h-[2rem] sm:h-[6vw] md:h-[4vw] " src="./public/images/Expedia.svg" alt="">
@@ -121,29 +151,13 @@
                     <img class="h-[2rem] sm:h-[6vw] md:h-[4vw] " src="./public/images/Zappos.svg" alt="">
                     <img class="h-[2rem] sm:h-[6vw] md:h-[4vw] " src="./public/images/Toefl.svg" alt="">
                 </div>
-                <div class="flex items-center gap-24 sm:gap-[15rem] items-center  ml-[65rem] sm:ml-[100rem]">
-                    <img class="h-[2rem] sm:h-[6vw] md:h-[4vw] " src="./public/images/AVIS.svg" alt="">
-                    <img class="h-[2rem] sm:h-[6vw] md:h-[4vw] " src="./public/images/Clover.svg" alt="">
-                    <img class="h-[2rem] sm:h-[6vw] md:h-[4vw] " src="./public/images/Expedia.svg" alt="">
-                    <img class="h-[2rem] sm:h-[6vw] md:h-[4vw] " src="./public/images/Baron.svg" alt="">
-                    <img class="h-[2rem] sm:h-[6vw] md:h-[4vw] " src="./public/images/ETS.svg" alt="">
-                    <img class="h-[2rem] sm:h-[6vw] md:h-[4vw] " src="./public/images/Lucid.svg" alt="">
-                    <img class="h-[2rem] sm:h-[6vw] md:h-[4vw] " src="./public/images/Identity.svg" alt="">
-                    <img class="h-[2rem] sm:h-[6vw] md:h-[4vw] " src="./public/images/Microsoft.svg" alt="">
-                    <img class="h-[2rem] sm:h-[6vw] md:h-[4vw] " src="./public/images/Under_armour.svg" alt="">
-                    <img class="h-[2rem] sm:h-[6vw] md:h-[4vw] " src="./public/images/NFL.svg" alt="">
-                    <img class="h-[2rem] sm:h-[6vw] md:h-[4vw] " src="./public/images/NEOM.svg" alt="">
-                    <img class="h-[2rem] sm:h-[6vw] md:h-[4vw] " src="./public/images/Comcast.svg" alt="">
-                    <img class="h-[2rem] sm:h-[6vw] md:h-[4vw] " src="./public/images/Zappos.svg" alt="">
-                    <img class="h-[2rem] sm:h-[6vw] md:h-[4vw] " src="./public/images/Toefl.svg" alt="">
                 </div>
-               
-            </div>
+                
        
         </section>
         <!-- about -->
         <section>
-            <div class="flex bg-black text-white flex-col sm:flex-row sm:px-4 py-24 sm:pt-64 sm:pb-24 w-full gap-8 sm:gap-0 sm:justify-between justify-center items-center">
+            <div id="contact" class="flex bg-black text-white flex-col sm:flex-row sm:px-4 py-24 sm:pt-64 sm:pb-24 w-full gap-8 sm:gap-0 sm:justify-between justify-center items-center">
                 <div class=" flex justify-center sm:justify-end sm:w-[25%] lg:w-1/2 ">
                    <div class="w-[60vw] sm:w-[15rem]">
                     <img src="./public/images/cynthia.webp" alt="">
@@ -152,7 +166,7 @@
                 <div class="w-[90%] sm:w-[70%] lg:w-[45%]">
                     <h3 class="uppercase text-white/70 text-[4vw] sm:text-[1rem]">(About me)</h3>
                     <p class="w-full lg:w-[75%] text-[4vw] sm:text-[2vw] lg:text-[1.2rem]">I'm a product and motion designer who loves creating things that are not just eye candy but also fix life's little hiccups. When I'm not glued to my computer like a robot or scribbling on my iPad, you might catch me leveling up in video games, snapping photos like a wannabe pro, or watching football because football is life. My design philosophy? Keep it snazzy, make it work, and sprinkle in a bit of fun. I'm the designer you want on your team if you want people to exclaim, "I need that in my life!".</p>
-                    <button class="hover:bg-white hover:text-black transition-all ease-in duration-500 px-4 sm:px-6 py-1 border-1 rounded-full mt-6 text-[2.8vw] sm:text-[1rem]">Let's talk</button>
+                    <a target="_blank" href="https://www.linkedin.com/in/saurabh-dwivedi-7b301a334/"><button class="hover:bg-white hover:text-black transition-all ease-in duration-500 px-4 sm:px-6 py-1 border-1 rounded-full mt-6 text-[2.8vw] sm:text-[1rem]">Let's talk</button></a>
                 </div>
             </div>
         </section>

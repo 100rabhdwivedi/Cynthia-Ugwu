@@ -2,6 +2,15 @@ function firstPage() {
   let tl = gsap.timeline();
 
   // Animate nav from above with opacity fade-in
+  tl.to(".loadingpage",{
+    y: -1500,
+    opacity: 0,
+    duration: 1.5,
+    ease: "ease-in-out",
+    delay:1,
+    display:"none"
+    
+  })
   tl.from("nav", {
     y: -10,
     opacity: 0,
@@ -25,7 +34,6 @@ function firstPage() {
       ease: "power4.out",
     });
 }
-
 firstPage();
 
 var cursor = document.querySelector(".minicursor");
@@ -39,7 +47,6 @@ function cursorFollower(xscale, yscale) {
     });
   });
 }
-
 cursorFollower();
 
 document.querySelectorAll(".elem").forEach((elem) => {
@@ -50,6 +57,20 @@ document.querySelectorAll(".elem").forEach((elem) => {
       opacity: 0,
       ease: "ease-in",
     });
+    gsap.to(elem,{
+      color: "#fff",
+      paddingLeft: " 0px",  
+      paddingRight: "0px",
+      duration: 0.5,
+      ease: "ease-in ",
+      // innerText:"",
+    })
+    gsap.to(cursor,{
+      scale:1,
+      duration: 0.5,
+      ease: "elastic.out",
+      innerText:"",
+    })
   });
   elem.addEventListener("mouseenter", () => {
     // Add a slight delay or check if the image is really out of view
@@ -57,6 +78,21 @@ document.querySelectorAll(".elem").forEach((elem) => {
       opacity: 1,
       ease: "ease-in",
     });
+    gsap.to(elem,{
+      color: "rgba(80, 80, 80, 0.4)",
+      paddingLeft: " 20px",  
+      paddingRight: "20px",
+      duration: 0.5,
+      ease: "ease-in ",
+      // innerText:"",
+    })
+    gsap.to(cursor,{
+      scale:5,
+      duration: 0.5,
+      ease: "elastic.out",
+      innerText:"View",
+      
+    })
   });
 
   var rot = 0;
@@ -101,10 +137,19 @@ function arrowBord() {
     
   });
 }
-
 arrowBord();
 
-
+function Marquee(){
+  var marquee = document.querySelector('.marquee');
+  gsap.to(marquee, {
+    x: '-100%',
+    ease: "linear",
+    repeat: -1,
+    duration: 40,
+    
+  })
+}
+Marquee()
 
 function updateTime() {
   const options = {
@@ -117,6 +162,61 @@ function updateTime() {
   document.getElementById("india-time").innerText =
     new Date().toLocaleTimeString("en-US", options);
 }
+
+var menu = document.querySelector('.menu');
+var smallnav = document.querySelector('.smallnav');
+var cross = document.querySelector('.smallnav .text-right i');
+
+menu.addEventListener('click', () => {
+  let tl = gsap.timeline();
+
+  tl.to(smallnav, {
+    opacity: 1,
+    duration: 0.5,
+    ease: "power4.out",
+    display: "block", // Show the small nav
+  });
+
+
+  tl.to('.smallnav a', {
+    y: 0,
+    opacity: 1,
+    duration: 1,
+    stagger: 0.2,
+    ease: "power4.out",
+  });
+
+  gsap.to(menu, {
+    opacity: 0,
+    display: 'none', 
+    duration: 0.5,
+    ease: "power4.out",
+  });
+
+  console.log("Menu clicked");
+});
+
+// Close button functionality
+cross.addEventListener('click', () => {
+  let tl = gsap.timeline();
+
+  tl.to(smallnav, {
+    opacity: 0,
+    duration: 0.5,
+    ease: "power4.out",
+    display: "none", // Hide the small nav
+  });
+
+  tl.to(menu, {
+    opacity: 1,
+    display: 'block',
+    duration: 0.5,
+    ease: "power4.out",
+  });
+
+  console.log("Cross clicked");
+});
+
 
 // Update time every second
 setInterval(updateTime, 1000);
